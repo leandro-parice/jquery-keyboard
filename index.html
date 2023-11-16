@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <input type="text" name="name" id="name" required tabindex="1" />
+            <input type="email" name="email" id="email" required tabindex="2" />
+            <input type="text" name="phone" id="phone" required maxlength="15" tabindex="3" />
+            <input type="text" name="cpf" id="cpf" required maxlength="14" tabindex="4" />
+            <input type="text" name="birthday" id="birthday" required maxlength="10" tabindex="5" />
+            <input type="text" name="address" id="address" required tabindex="6" />
+        </form>
+        <div class="keyboard">
+            <div class="template" id="keyboard-name">
+                <div class="row">
+                    <button onclick="handleKey('Q')">Q</button>
+                    <button onclick="handleKey('W')">W</button>
+                    <button onclick="handleKey('E')">E</button>
+                    <button onclick="handleKey('R')">R</button>
+                    <button onclick="handleKey('T')">T</button>
+                    <button onclick="handleKey('Y')">Y</button>
+                    <button onclick="handleKey('U')">U</button>
+                    <button onclick="handleKey('I')">I</button>
+                    <button onclick="handleKey('O')">O</button>
+                    <button onclick="handleKey('P')">P</button>
+                    <button onclick="handleKey('backspace')">←</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('A')">A</button>
+                    <button onclick="handleKey('S')">S</button>
+                    <button onclick="handleKey('D')">D</button>
+                    <button onclick="handleKey('F')">F</button>
+                    <button onclick="handleKey('G')">G</button>
+                    <button onclick="handleKey('H')">H</button>
+                    <button onclick="handleKey('J')">J</button>
+                    <button onclick="handleKey('K')">K</button>
+                    <button onclick="handleKey('L')">L</button>
+                    <button onclick="handleKey('Ç')">Ç</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleAccent('acute')" class="btn-accent" id="btn-accent-acute">´</button>
+                    <button onclick="handleAccent('circumflex')" class="btn-accent" id="btn-accent-circumflex">^</button>
+                    <button onclick="handleKey('Z')">Z</button>
+                    <button onclick="handleKey('X')">X</button>
+                    <button onclick="handleKey('C')">C</button>
+                    <button onclick="handleKey('V')">V</button>
+                    <button onclick="handleKey('B')">B</button>
+                    <button onclick="handleKey('N')">N</button>
+                    <button onclick="handleKey('M')">M</button>
+                    <button onclick="handleAccent('grave')" class="btn-accent" id="btn-accent-grave">`</button>
+                    <button onclick="handleAccent('tilde')" class="btn-accent" id="btn-accent-tilde">˜</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey(' ')" class="key-space">&nbsp;</button>
+                    <button onclick="handleKey('del')">Limpar</button>
+                    <button onclick="handleKey('ok')">Ok</button>
+                </div>
+            </div>
+            <div class="template" id="keyboard-email">
+                <div class="row">
+                    <button onclick="handleKey('1')">1</button>
+                    <button onclick="handleKey('2')">2</button>
+                    <button onclick="handleKey('3')">3</button>
+                    <button onclick="handleKey('4')">4</button>
+                    <button onclick="handleKey('5')">5</button>
+                    <button onclick="handleKey('6')">6</button>
+                    <button onclick="handleKey('7')">7</button>
+                    <button onclick="handleKey('8')">8</button>
+                    <button onclick="handleKey('9')">9</button>
+                    <button onclick="handleKey('0')">0</button>
+                    <button onclick="handleKey('backspace')">←</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('Q')">Q</button>
+                    <button onclick="handleKey('W')">W</button>
+                    <button onclick="handleKey('E')">E</button>
+                    <button onclick="handleKey('R')">R</button>
+                    <button onclick="handleKey('T')">T</button>
+                    <button onclick="handleKey('Y')">Y</button>
+                    <button onclick="handleKey('U')">U</button>
+                    <button onclick="handleKey('I')">I</button>
+                    <button onclick="handleKey('O')">O</button>
+                    <button onclick="handleKey('P')">P</button>
+                    <button onclick="handleKey('@')">@</button>
+                    <button onclick="handleKey('.')">.</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('A')">A</button>
+                    <button onclick="handleKey('S')">S</button>
+                    <button onclick="handleKey('D')">D</button>
+                    <button onclick="handleKey('F')">F</button>
+                    <button onclick="handleKey('G')">G</button>
+                    <button onclick="handleKey('H')">H</button>
+                    <button onclick="handleKey('J')">J</button>
+                    <button onclick="handleKey('K')">K</button>
+                    <button onclick="handleKey('L')">L</button>
+                    <button onclick="handleKey('-')">-</button>
+                    <button onclick="handleKey('_')">_</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('Z')">Z</button>
+                    <button onclick="handleKey('X')">X</button>
+                    <button onclick="handleKey('C')">C</button>
+                    <button onclick="handleKey('V')">V</button>
+                    <button onclick="handleKey('B')">B</button>
+                    <button onclick="handleKey('N')">N</button>
+                    <button onclick="handleKey('M')">M</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('@gmail.com')">@gmail.com</button>
+                    <button onclick="handleKey('@yahoo.com')">@yahoo.com</button>
+                    <button onclick="handleKey('@hotmail.com')">@hotmail.com
+                    </button>
+                    <button onclick="handleKey('.com')">.com</button>
+                    <button onclick="handleKey('.com.br')">.com.br</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('del')">Limpar</button>
+                    <button onclick="handleKey('ok')">Ok</button>
+                </div>
+            </div>
+            <div class="template" id="keyboard-number">
+                <div class="row">
+                    <button onclick="handleKey('1')">1</button>
+                    <button onclick="handleKey('2')">2</button>
+                    <button onclick="handleKey('3')">3</button>
+                    <button onclick="handleKey('4')">4</button>
+                    <button onclick="handleKey('5')">5</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('6')">6</button>
+                    <button onclick="handleKey('7')">7</button>
+                    <button onclick="handleKey('8')">8</button>
+                    <button onclick="handleKey('9')">9</button>
+                    <button onclick="handleKey('0')">0</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('del')">Limpar</button>
+                    <button onclick="handleKey('backspace')">←</button>
+                    <button onclick="handleKey('ok')">Ok</button>
+                </div>
+            </div>
+            <div class="template" id="keyboard-address">
+                <div class="row">
+                    <button onclick="handleKey('1')">1</button>
+                    <button onclick="handleKey('2')">2</button>
+                    <button onclick="handleKey('3')">3</button>
+                    <button onclick="handleKey('4')">4</button>
+                    <button onclick="handleKey('5')">5</button>
+                    <button onclick="handleKey('6')">6</button>
+                    <button onclick="handleKey('7')">7</button>
+                    <button onclick="handleKey('8')">8</button>
+                    <button onclick="handleKey('9')">9</button>
+                    <button onclick="handleKey('0')">0</button>
+                    <button onclick="handleKey('backspace')">←</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('Q')">Q</button>
+                    <button onclick="handleKey('W')">W</button>
+                    <button onclick="handleKey('E')">E</button>
+                    <button onclick="handleKey('R')">R</button>
+                    <button onclick="handleKey('T')">T</button>
+                    <button onclick="handleKey('Y')">Y</button>
+                    <button onclick="handleKey('U')">U</button>
+                    <button onclick="handleKey('I')">I</button>
+                    <button onclick="handleKey('O')">O</button>
+                    <button onclick="handleKey('P')">P</button>
+                    <button onclick="handleKey('.')">.</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey('A')">A</button>
+                    <button onclick="handleKey('S')">S</button>
+                    <button onclick="handleKey('D')">D</button>
+                    <button onclick="handleKey('F')">F</button>
+                    <button onclick="handleKey('G')">G</button>
+                    <button onclick="handleKey('H')">H</button>
+                    <button onclick="handleKey('J')">J</button>
+                    <button onclick="handleKey('K')">K</button>
+                    <button onclick="handleKey('L')">L</button>
+                    <button onclick="handleKey('Ç')">Ç</button>
+                    <button onclick="handleKey('-')">-</button>
+                    <button onclick="handleKey('_')">_</button>
+                    <button onclick="handleKey(',')">,</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleAccent('acute')" class="btn-accent" id="btn-accent-acute">´</button>
+                    <button onclick="handleAccent('circumflex')" class="btn-accent" id="btn-accent-circumflex">^</button>
+                    <button onclick="handleKey('Z')">Z</button>
+                    <button onclick="handleKey('X')">X</button>
+                    <button onclick="handleKey('C')">C</button>
+                    <button onclick="handleKey('V')">V</button>
+                    <button onclick="handleKey('B')">B</button>
+                    <button onclick="handleKey('N')">N</button>
+                    <button onclick="handleKey('M')">M</button>
+                    <button onclick="handleAccent('grave')" class="btn-accent" id="btn-accent-grave">`</button>
+                    <button onclick="handleAccent('tilde')" class="btn-accent" id="btn-accent-tilde">˜</button>
+                </div>
+                <div class="row">
+                    <button onclick="handleKey(' ')" class="key-space">&nbsp;</button>
+                    <button onclick="handleKey('del')">Limpar</button>
+                    <button onclick="handleKey('ok')">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
